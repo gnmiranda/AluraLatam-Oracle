@@ -1,0 +1,259 @@
+body {
+  box-sizing: border-box;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  font-weight: bold;
+  background: linear-gradient(0.9turn, #e1f2f5, #b4def9, #84a9ac, #4d648d);
+}
+
+
+
+header {
+	box-shadow: 10px 0px 20px 5px black;
+	width: auto;
+}
+
+.header_box {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+.header_box_img {
+	width: 25%;
+}
+.header_img {
+	width: 250px;
+	position: absolute;
+}
+
+.header_titulo-creditos {
+	font-size: 17px;
+	text-align: end;
+	padding-right: 1em;
+	font-weight: bold;
+	width: 25%;
+	margin-top: 20px;
+		color: #333;
+}
+
+.header_titulo-principal {
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 0 0 1em 0;
+	width: 50%;
+	margin-top: 20px;
+}
+
+.main_box {
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.reglas {
+	margin: 10px 50px 15px 50px;
+	display: inline;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.container_box {
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+}
+
+.columna-encriptar {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	align-items: center;
+}
+
+.entrada-texto {
+	font-weight: bold;
+	color: black;
+	resize: none;
+	margin: 0 30px;
+	border: 0;
+	border-radius: 15px;
+	background: whitesmoke;
+	padding: 20px;
+	font-size: 17px;
+	box-shadow: 10px 10px 30px 5px black;
+	text-transform: lowercase;
+	width: 100%;
+}
+
+.entrada-texto:focus {
+	outline: none;
+}
+
+.columna-desencriptar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.salida-texto {
+	overflow: visible;
+	font-weight: bold;
+	color: black;
+	resize: none;
+	margin: 0 30px;
+	border: 0;
+	border-radius: 15px;
+	background: whitesmoke;
+	background-image: url(recursos/seguridad-personal.png);
+	background-size: 35%;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 20px;
+	font-size: 17px;
+	box-shadow: 10px 10px 30px 5px black;
+	width: 100%;
+}
+
+.salida-texto:focus {
+	outline: none;
+}
+
+.botones_desencriptar {
+	display: flex;
+	justify-content: center;
+}
+
+.botones_encriptar {
+	display: flex;
+	justify-content: center;
+}
+
+#boton {
+	font-weight: bold;
+	border: none;
+	border-radius: 20px;
+	padding: 5px;
+	margin: 0.6rem;
+	cursor: pointer;
+	box-shadow: 10px 10px 30px 5px black;
+	font-family: "Sofia Sans Semi Condensed", sans-serif;
+	background: linear-gradient(0.18turn, #e1f2f5, #b4def9, #84a9ac);
+	height: 60px;
+	width: auto;
+	font-size: 20px;
+	transition: 100ms all;
+}
+
+#botones,
+.boton-desencriptar:hover,
+.boton-encriptar:hover,
+.boton-copiar:hover {
+	transform: scale(1.05);
+}
+
+.footer_box {
+	text-align: center;
+	color: #333;
+	font-size: 15px;
+	padding: 0 5px 10px 5px;
+}
+
+.imagen_footer {
+	width: 150px;
+}
+
+.footer_nav {
+	position: static;
+	text-align: center;
+	margin: 2px 0 2px 0;
+}
+
+.footer_lista {
+	display: inline;
+	padding: 10px;
+}
+
+.footer_link {
+	text-transform: uppercase;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: black;
+	text-decoration: underline;
+	transition: 400ms;
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 767px) {
+	.header_img {
+		width: 100px;
+	}
+	.header_titulo-creditos {
+		font-size: 10px;
+	}
+
+	.header_titulo-principal {
+		font-size: 13px;
+	}
+	.reglas {
+		font-size: 12px;
+	}
+	.container_box {
+		flex-direction: column;
+	}
+	.columna-encriptar {
+		width: 100%;
+		flex-direction: initial;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+	.entrada-texto {
+		font-size: 10px;
+		height: 60px;
+		margin: 0.1rem;
+		width: 50%;
+	}
+	#boton {
+		width: auto;
+		font-size: 10px;
+		padding: 0px;
+		margin: 0.6rem;
+	}
+	.botones_encriptar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 30%;
+	}
+	.columna-desencriptar {
+		width: 100%;
+		flex-direction: initial;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	.salida-texto {
+		font-size: 10px;
+		height: 60px;
+		margin: 0.1rem;
+		width: 50%;
+	}
+	.botones_desencriptar {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+	}
+	.footer_box {
+		font-size: 10px;
+	}
+}
